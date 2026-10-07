@@ -1,0 +1,643 @@
+{
+ "schema": "anticloud.tier-bench/1",
+ "project": "OPENMM",
+ "source": {
+  "repo_path": "E:\\fenta\\Downloads\\The Anticloud\\ANTICLOUD_REPOS\\CHEMICAL_MANUFACTURING\\OPENMM\\UPSTREAM_CLONE",
+  "git": {
+   "head": "REMOVED_CONTAMINATED_SHA_PENDING_API_RESOLVE",
+   "url": "https://github.com/the-anticloud/OPENMRS_CORE.git",
+   "branch": "master",
+   "committed_at": "2026-09-29T11:06:59+04:00",
+   "sha_verified_from": "local clone .git file read (no .git dir in clone)"
+  }
+ },
+ "metrics": {
+  "files_total": 998,
+  "source_files_scanned": 395,
+  "lines_of_code": 104874,
+  "languages": {
+   ".hpp": 283,
+   ".png": 208,
+   ".json": 180,
+   ".dll": 102,
+   ".h": 57,
+   ".py": 48,
+   ".exe": 15,
+   ".xml": 14,
+   ".gif": 12,
+   ".bmp": 11,
+   "(none)": 7,
+   ".bat": 6,
+   ".jpg": 6,
+   ".txt": 6,
+   ".m": 6
+  }
+ },
+ "licence": {
+  "spdx": "MIT",
+  "class": "A",
+  "source_file": "LICENSE",
+  "redistribution_allowed": true
+ },
+ "dependencies": {
+  "count": 0,
+  "unique": 0,
+  "by_ecosystem": {},
+  "list": []
+ },
+ "owasp_top10": {
+  "total_findings": 68,
+  "files_with_findings": 63,
+  "severity": {
+   "high": 8,
+   "medium": 1,
+   "low": 59
+  },
+  "categories": {
+   "A01-BrokenAccessControl": {
+    "count": 0,
+    "findings": []
+   },
+   "A02-CryptographicFailures": {
+    "count": 1,
+    "findings": [
+     {
+      "severity": "medium",
+      "file": "include/opencv2/core.hpp",
+      "line": 2793,
+      "cwe": "CWE-338",
+      "snippet": "/** @brief Mersenne Twister random number generator"
+     }
+    ]
+   },
+   "A03-Injection": {
+    "count": 7,
+    "findings": [
+     {
+      "severity": "high",
+      "file": "include/openpose/thread/thread.hpp",
+      "line": 31,
+      "cwe": "CWE-95",
+      "snippet": "void exec(const std::shared_ptr<std::atomic<bool>>& isRunningSharedPtr);"
+     },
+     {
+      "severity": "high",
+      "file": "include/openpose/thread/threadManager.hpp",
+      "line": 172,
+      "cwe": "CWE-95",
+      "snippet": "(*mThreads.rbegin())->exec(spIsRunning);"
+     },
+     {
+      "severity": "high",
+      "file": "include/opencv2/flann/saving.h",
+      "line": 90,
+      "cwe": "CWE-120",
+      "snippet": "strcpy(header.signature, FLANN_SIGNATURE_);"
+     },
+     {
+      "severity": "high",
+      "file": "FCRN Depth Prediction for VMD/matlab/DepthMapPrediction.m",
+      "line": 60,
+      "cwe": "CWE-95",
+      "snippet": "net.eval(inputs) ;"
+     },
+     {
+      "severity": "high",
+      "file": "3D Pose by GAN/GAN/pose/dataset/pose_dataset.py",
+      "line": 92,
+      "cwe": "CWE-78",
+      "snippet": "os.system('wget --no-check-certificate \"https://onedriv' + \\"
+     },
+     {
+      "severity": "high",
+      "file": "3D Pose by GAN/bin/eval_pck.py",
+      "line": 21,
+      "cwe": "CWE-502",
+      "snippet": "options = pickle.load(f)"
+     },
+     {
+      "severity": "high",
+      "file": "3D Pose Baseline to VMD/src/predict_3dpose.py",
+      "line": 237,
+      "cwe": "CWE-95",
+      "snippet": "\"=============================\" % (model.global_step.eval(),"
+     }
+    ]
+   },
+   "A04-InsecureDesign": {
+    "count": 24,
+    "findings": [
+     {
+      "severity": "low",
+      "file": "VMD 3D Pose Baseline Multi-Objects/packages/lifting/_pose_estimator.py",
+      "line": 65,
+      "cwe": "CWE-",
+      "snippet": "TODO: _N shadows built-in name '_N'"
+     },
+     {
+      "severity": "low",
+      "file": "VMD 3D Pose Baseline Multi-Objects/packages/lifting/utils/cpm.py",
+      "line": 2,
+      "cwe": "CWE-",
+      "snippet": "TODO: Almost all variables in this file violate PEP 8 naming conventions"
+     },
+     {
+      "severity": "low",
+      "file": "VMD 3D Pose Baseline Multi-Objects/packages/lifting/utils/draw.py",
+      "line": 57,
+      "cwe": "CWE-",
+      "snippet": "TODO: 'j' shadows name 'j' from outer scope"
+     },
+     {
+      "severity": "low",
+      "file": "VMD 3D Pose Baseline Multi-Objects/packages/lifting/utils/upright_fast.py",
+      "line": 40,
+      "cwe": "CWE-",
+      "snippet": "TODO: Missing the following parameters in docstring:"
+     },
+     {
+      "severity": "low",
+      "file": "VMD 3D Pose Baseline Multi-Objects/applications/pos2vmd_multi.py",
+      "line": 2142,
+      "cwe": "CWE-",
+      "snippet": "# FIXME \u30af\u30a9\u30fc\u30bf\u30cb\u30aa\u30f3\u3067\u6c42\u3081\u3089\u308c\u306a\u3044\u304b\u8981\u8abf\u67fb"
+     },
+     {
+      "severity": "low",
+      "file": "include/openpose/experimental/producer/wPeoplePoseLoader.hpp",
+      "line": 1,
+      "cwe": "CWE-",
+      "snippet": "// TODO: IMPLEMENT THIS CLASS so that we can:"
+     },
+     {
+      "severity": "low",
+      "file": "include/openpose/core/macros.hpp",
+      "line": 24,
+      "cwe": "CWE-",
+      "snippet": "#pragma warning ( disable : 4251 ) // XXX needs to have dll-interface to be used by clients of class YYY"
+     },
+     {
+      "severity": "low",
+      "file": "include/opencv2/core.hpp",
+      "line": 678,
+      "cwe": "CWE-",
+      "snippet": "@todo document"
+     },
+     {
+      "severity": "low",
+      "file": "include/opencv2/stitching/detail/util.hpp",
+      "line": 53,
+      "cwe": "CWE-",
+      "snippet": "// TODO remove LOG macros, add logging class"
+     },
+     {
+      "severity": "low",
+      "file": "include/opencv2/flann/hierarchical_clustering_index.h",
+      "line": 679,
+      "cwe": "CWE-",
+      "snippet": "* TODO: for 1-sized clusters don't store a cluster center (it's the same as the single cluster point)"
+     },
+     {
+      "severity": "low",
+      "file": "include/opencv2/flann/kmeans_index.h",
+      "line": 714,
+      "cwe": "CWE-",
+      "snippet": "* TODO: for 1-sized clusters don't store a cluster center (it's the same as the single cluster point)"
+     },
+     {
+      "severity": "low",
+      "file": "include/opencv2/flann/lsh_table.h",
+      "line": 42,
+      "cwe": "CWE-",
+      "snippet": "// TODO as soon as we use C++0x, use the code in USE_UNORDERED_MAP"
+     },
+     {
+      "severity": "low",
+      "file": "include/opencv2/core/affine.hpp",
+      "line": 58,
+      "cwe": "CWE-",
+      "snippet": "@todo document"
+     },
+     {
+      "severity": "low",
+      "file": "include/opencv2/core/core_c.h",
+      "line": 663,
+      "cwe": "CWE-",
+      "snippet": "It is useful for speeding up pair-wise operations (TODO: provide an example)"
+     },
+     {
+      "severity": "low",
+      "file": "include/opencv2/core/directx.hpp",
+      "line": 80,
+      "cwe": "CWE-",
+      "snippet": "// TODO static functions in the Context class"
+     },
+     {
+      "severity": "low",
+      "file": "include/opencv2/core/mat.hpp",
+      "line": 2146,
+      "cwe": "CWE-",
+      "snippet": "/** @todo document */"
+     },
+     {
+      "severity": "low",
+      "file": "include/opencv2/core/mat.inl.hpp",
+      "line": 3365,
+      "cwe": "CWE-",
+      "snippet": "// !!!TODO!!!"
+     },
+     {
+      "severity": "low",
+      "file": "include/opencv2/core/ocl.hpp",
+      "line": 331,
+      "cwe": "CWE-",
+      "snippet": "// TODO Move to internal header"
+     },
+     {
+      "severity": "low",
+      "file": "include/opencv2/core/opengl.hpp",
+      "line": 520,
+      "cwe": "CWE-",
+      "snippet": "// TODO static functions in the Context class"
+     },
+     {
+      "severity": "low",
+      "file": "include/opencv2/core/va_intel.hpp",
+      "line": 47,
+      "cwe": "CWE-",
+      "snippet": "// TODO static functions in the Context class"
+     },
+     {
+      "severity": "low",
+      "file": "include/opencv2/core/hal/intrin_neon.hpp",
+      "line": 444,
+      "cwe": "CWE-",
+      "snippet": "// TODO: exp, log, sin, cos"
+     },
+     {
+      "severity": "low",
+      "file": "include/opencv2/core/hal/intrin_sse.hpp",
+      "line": 730,
+      "cwe": "CWE-",
+      "snippet": "// TODO: exp, log, sin, cos"
+     },
+     {
+      "severity": "low",
+      "file": "3D Pose by GAN/GAN/pose/dataset/pose_dataset.py",
+      "line": 67,
+      "cwe": "CWE-",
+      "snippet": "XXX = XX * np.tile(radial + tan, (2, 1)) + \\"
+     },
+     {
+      "severity": "low",
+      "file": "3D Pose Baseline to VMD/src/cameras.py",
+      "line": 46,
+      "cwe": "CWE-",
+      "snippet": "XXX = XX * np.tile(radial+tan,(2,1)) + np.outer(np.array([p[1], p[0]]).reshape(-1), r2 )"
+     }
+    ]
+   },
+   "A05-SecurityMisconfiguration": {
+    "count": 0,
+    "findings": []
+   },
+   "A06-VulnerableComponents": {
+    "count": 0,
+    "findings": []
+   },
+   "A07-AuthFailures": {
+    "count": 0,
+    "findings": []
+   },
+   "A08-SoftwareDataIntegrity": {
+    "count": 36,
+    "findings": [
+     {
+      "severity": "low",
+      "file": "VMD 3D Pose Baseline Multi-Objects/setup.sh",
+      "line": 13,
+      "cwe": "CWE-319",
+      "snippet": "${WGET} http://visual.cs.ucl.ac.uk/pubs/liftingFromTheDeep/res/init_session.tar.gz"
+     },
+     {
+      "severity": "low",
+      "file": "VMD 3D Pose Baseline Multi-Objects/applications/head_face.py",
+      "line": 13,
+      "cwe": "CWE-319",
+      "snippet": "#   http://dlib.net/files/shape_predictor_68_face_landmarks.dat.bz2."
+     },
+     {
+      "severity": "low",
+      "file": "include/openpose/producer/spinnakerWrapper.hpp",
+      "line": 34,
+      "cwe": "CWE-319",
+      "snippet": "// http://www.cppsamples.com/common-tasks/pimpl.html"
+     },
+     {
+      "severity": "low",
+      "file": "include/openpose/pose/poseExtractorCaffe.hpp",
+      "line": 40,
+      "cwe": "CWE-319",
+      "snippet": "// http://www.cppsamples.com/common-tasks/pimpl.html"
+     },
+     {
+      "severity": "low",
+      "file": "include/openpose/pose/poseParametersRender.hpp",
+      "line": 209,
+      "cwe": "CWE-319",
+      "snippet": "// http://www.perbang.dk/rgbgradient/"
+     },
+     {
+      "severity": "low",
+      "file": "include/openpose/net/netCaffe.hpp",
+      "line": 25,
+      "cwe": "CWE-319",
+      "snippet": "// http://www.cppsamples.com/common-tasks/pimpl.html"
+     },
+     {
+      "severity": "low",
+      "file": "include/openpose/net/nmsCaffe.hpp",
+      "line": 45,
+      "cwe": "CWE-319",
+      "snippet": "// http://www.cppsamples.com/common-tasks/pimpl.html"
+     },
+     {
+      "severity": "low",
+      "file": "include/openpose/hand/handExtractorCaffe.hpp",
+      "line": 62,
+      "cwe": "CWE-319",
+      "snippet": "// http://www.cppsamples.com/common-tasks/pimpl.html"
+     },
+     {
+      "severity": "low",
+      "file": "include/openpose/gui/frameDisplayer.hpp",
+      "line": 48,
+      "cwe": "CWE-319",
+      "snippet": "* http://docs.opencv.org/2.4/modules/highgui/doc/user_interface.html?highlight=waitkey"
+     },
+     {
+      "severity": "low",
+      "file": "include/openpose/gpu/cl2.hpp",
+      "line": 58,
+      "cwe": "CWE-319",
+      "snippet": "*       http://khronosgroup.github.io/OpenCL-CLHPP/"
+     },
+     {
+      "severity": "low",
+      "file": "include/openpose/face/faceExtractorCaffe.hpp",
+      "line": 51,
+      "cwe": "CWE-319",
+      "snippet": "// http://www.cppsamples.com/common-tasks/pimpl.html"
+     },
+     {
+      "severity": "low",
+      "file": "include/opencv2/core.hpp",
+      "line": 222,
+      "cwe": "CWE-319",
+      "snippet": "//! <http://sources.isc.org/utils/misc/hershey-font.txt> are supported"
+     },
+     {
+      "severity": "low",
+      "file": "include/opencv2/features2d.hpp",
+      "line": 323,
+      "cwe": "CWE-319",
+      "snippet": "article](http://en.wikipedia.org/wiki/Maximally_stable_extremal_regions))."
+     },
+     {
+      "severity": "low",
+      "file": "include/opencv2/imgcodecs.hpp",
+      "line": 146,
+      "cwe": "CWE-319",
+      "snippet": "then [GDAL](http://www.gdal.org) driver will be used in order to decode the image by supporting"
+     },
+     {
+      "severity": "low",
+      "file": "include/opencv2/imgproc.hpp",
+      "line": 114,
+      "cwe": "CWE-319",
+      "snippet": "sophisticated [interpolation methods](http://en.wikipedia.org/wiki/Multivariate_interpolation) ,"
+     },
+     {
+      "severity": "low",
+      "file": "include/opencv2/objdetect.hpp",
+      "line": 102,
+      "cwe": "CWE-319",
+      "snippet": "<http://research.microsoft.com/en-us/um/people/viola/Pubs/Detect/violaJones_CVPR2001.pdf>"
+     },
+     {
+      "severity": "low",
+      "file": "include/opencv2/photo.hpp",
+      "line": 104,
+      "cwe": "CWE-319",
+      "snippet": "objects from still images or video. See <http://en.wikipedia.org/wiki/Inpainting> for more details."
+     },
+     {
+      "severity": "low",
+      "file": "include/opencv2/videoio.hpp",
+      "line": 595,
+      "cwe": "CWE-319",
+      "snippet": "FOURCC](http://www.fourcc.org/codecs.php) page. FFMPEG backend with MP4 container natively uses"
+     },
+     {
+      "severity": "low",
+      "file": "include/opencv2/videostab/fast_marching.hpp",
+      "line": 61,
+      "cwe": "CWE-319",
+      "snippet": "See http://iwi.eldoc.ub.rug.nl/FILES/root/2004/JGraphToolsTelea/2004JGraphToolsTelea.pdf"
+     },
+     {
+      "severity": "low",
+      "file": "include/opencv2/video/tracking.hpp",
+      "line": 318,
+      "cwe": "CWE-319",
+      "snippet": "The class implements a standard Kalman filter <http://en.wikipedia.org/wiki/Kalman_filter>,"
+     },
+     {
+      "severity": "low",
+      "file": "include/opencv2/photo/cuda.hpp",
+      "line": 75,
+      "cwe": "CWE-319",
+      "snippet": "<http://www.ipol.im/pub/algo/bcm_non_local_means_denoising> with several computational"
+     },
+     {
+      "severity": "low",
+      "file": "include/opencv2/flann/any.h",
+      "line": 10,
+      "cwe": "CWE-319",
+      "snippet": "* http://www.boost.org/LICENSE_1_0.txt"
+     },
+     {
+      "severity": "low",
+      "file": "include/opencv2/flann/dist.h",
+      "line": 484,
+      "cwe": "CWE-319",
+      "snippet": "* http://en.wikipedia.org/wiki/Hamming_weight */"
+     },
+     {
+      "severity": "low",
+      "file": "include/opencv2/core/bufferpool.hpp",
+      "line": 3,
+      "cwe": "CWE-319",
+      "snippet": "// of this distribution and at http://opencv.org/license.html."
+     },
+     {
+      "severity": "low",
+      "file": "include/opencv2/core/cvdef.h",
+      "line": 198,
+      "cwe": "CWE-319",
+      "snippet": "// See: http://connect.microsoft.com/VisualStudio/feedback/details/605858/arch-avx-should-define-a-predefined-macro-in-x64-and-set-a-unique-value-for-m-ix86-fp-in-win32"
+     }
+    ]
+   },
+   "A09-LoggingMonitoringFailures": {
+    "count": 0,
+    "findings": []
+   },
+   "A10-SSRF": {
+    "count": 0,
+    "findings": []
+   }
+  }
+ },
+ "owasp_llm_top10": {
+  "total_findings": 7,
+  "files_with_findings": 6,
+  "severity": {
+   "high": 0,
+   "medium": 2,
+   "low": 5
+  },
+  "categories": {
+   "LLM01-PromptInjection": {
+    "count": 2,
+    "findings": [
+     {
+      "severity": "medium",
+      "file": "include/opencv2/imgproc.hpp",
+      "line": 765,
+      "cwe": "CWE-1336",
+      "snippet": "virtual void setTemplate(InputArray templ, Point templCenter = Point(-1, -1)) = 0;"
+     },
+     {
+      "severity": "medium",
+      "file": "include/opencv2/imgproc/imgproc_c.h",
+      "line": 408,
+      "cwe": "CWE-1336",
+      "snippet": "CVAPI(void)  cvMatchTemplate( const CvArr* image, const CvArr* templ,"
+     }
+    ]
+   },
+   "LLM02-SensitiveInfoDisclosure": {
+    "count": 0,
+    "findings": []
+   },
+   "LLM03-SupplyChain": {
+    "count": 0,
+    "findings": []
+   },
+   "LLM04-DataPoisoning": {
+    "count": 0,
+    "findings": []
+   },
+   "LLM05-ImproperOutputHandling": {
+    "count": 0,
+    "findings": []
+   },
+   "LLM06-ExcessiveAgency": {
+    "count": 0,
+    "findings": []
+   },
+   "LLM07-SystemPromptLeak": {
+    "count": 0,
+    "findings": []
+   },
+   "LLM08-VectorEmbeddingWeaknesses": {
+    "count": 5,
+    "findings": [
+     {
+      "severity": "low",
+      "file": "include/opencv2/imgcodecs.hpp",
+      "line": 86,
+      "cwe": "CWE-",
+      "snippet": "IMWRITE_JPEG_CHROMA_QUALITY = 6,  //!< Separate chroma quality level, 0 - 100, default is 0 - don't use."
+     },
+     {
+      "severity": "low",
+      "file": "include/opencv2/imgproc.hpp",
+      "line": 551,
+      "cwe": "CWE-",
+      "snippet": "COLOR_BGR2YCrCb    = 36, //!< convert RGB/BGR to luma-chroma (aka YCC), @ref color_convert_rgb_ycrcb \"color conversions\""
+     },
+     {
+      "severity": "low",
+      "file": "include/opencv2/photo.hpp",
+      "line": 443,
+      "cwe": "CWE-",
+      "snippet": "@param color_adapt chromatic adaptation in [0, 1] range. If 1 channels are treated independently,"
+     },
+     {
+      "severity": "low",
+      "file": "include/opencv2/videoio/videoio_c.h",
+      "line": 306,
+      "cwe": "CWE-",
+      "snippet": "CV_CAP_PROP_XI_GAMMAC                                       = 477, // Chromaticity gamma"
+     },
+     {
+      "severity": "low",
+      "file": "include/opencv2/imgcodecs/imgcodecs_c.h",
+      "line": 85,
+      "cwe": "CWE-",
+      "snippet": "CV_IMWRITE_JPEG_CHROMA_QUALITY =6,"
+     }
+    ]
+   },
+   "LLM09-Misinformation": {
+    "count": 0,
+    "findings": []
+   },
+   "LLM10-UnboundedConsumption": {
+    "count": 0,
+    "findings": []
+   }
+  }
+ },
+ "sbom": {
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.5",
+  "serialNumber": "urn:uuid:fd4de592-8ed1-5db1-a6ab-2331970eca4b",
+  "version": 1,
+  "metadata": {
+   "timestamp": "2026-10-06T09:54:26Z",
+   "component": {
+    "type": "application",
+    "name": "OPENMM",
+    "version": "83b357604d34",
+    "bom-ref": "pkg:generic/anticloud/OPENMM@83b357604d34",
+    "purl": "pkg:generic/anticloud/OPENMM@83b357604d34",
+    "licenses": [
+     {
+      "license": {
+       "id": "MIT"
+      }
+     }
+    ]
+   },
+   "properties": [
+    {
+     "name": "anticloud:source-commit",
+     "value": "REMOVED_CONTAMINATED_SHA_PENDING_API_RESOLVE"
+    },
+    {
+     "name": "anticloud:source-url",
+     "value": "https://github.com/the-anticloud/OPENMRS_CORE.git"
+    },
+    {
+     "name": "anticloud:tier",
+     "value": "tier-agent"
+    }
+   ]
+  },
+  "components": []
+ },
+ "elapsed_seconds": 84.41
+}

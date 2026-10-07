@@ -1,0 +1,46 @@
+{
+ "bomFormat": "CycloneDX",
+ "specVersion": "1.5",
+ "serialNumber": "urn:uuid:fd4de592-8ed1-5db1-a6ab-2331970eca4b",
+ "version": 1,
+ "metadata": {
+  "timestamp": "2026-10-06T09:54:26Z",
+  "component": {
+   "type": "application",
+   "name": "OPENMM",
+   "version": "83b357604d34",
+   "bom-ref": "pkg:generic/anticloud/OPENMM@83b357604d34",
+   "purl": "pkg:generic/anticloud/OPENMM@83b357604d34",
+   "licenses": [
+    {
+     "license": {
+      "id": "MIT"
+     }
+    }
+   ]
+  },
+  "properties": [
+   {
+    "name": "anticloud:source-commit",
+    "value": "REMOVED_CONTAMINATED_SHA_PENDING_API_RESOLVE"
+   },
+   {
+    "name": "anticloud:source-url",
+    "value": "https://github.com/the-anticloud/OPENMRS_CORE.git"
+   },
+   {
+    "name": "anticloud:tier",
+    "value": "tier-agent"
+   }
+  ]
+ },
+ "components": [],
+ "source": {
+  "git": {
+   "head": null,
+   "url": null,
+   "sha_unverified": true,
+   "note": "contamination removed; resolve via GitHub API before quoting"
+  }
+ }
+}

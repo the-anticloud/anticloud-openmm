@@ -1,0 +1,31 @@
+# Appendix — OPENMM
+
+**Project:** OPENMM  
+**Category:** CHEMICAL_MANUFACTURING  
+**Upstream:** see BENCH.json  
+**Pinned commit:** `795d4dd660cf7e537ceb599fdb038c5388b33390`  
+**Assurance:** 16/16 checks passing  
+**Ledger head:** `55446d5ad2e4009396ce36ed462417e367c4d636b8a47e76fde1634b1fca9160`  
+**Date:** October 2026
+
+## A. Artifact hashes
+
+| Artifact | Location |
+|---|---|
+| Assurance report | `BENCH.json` |
+| Result register | `ISOLATED_LAB_RESULTS/03_Result_Register.md` |
+| Per-check evidence | `ISOLATED_LAB_RESULTS/04_Evidence/*.json` |
+| SBOM | `sbom.cdx.json` |
+| Ledger | `LEDGERS/ledger.aioss` |
+| Ledger head | `55446d5ad2e4009396ce36ed462417e367c4d636b8a47e76fde1634b1fca9160` |
+
+## B. Framework coverage
+
+Eleven framework mappings are recorded in `BENCH.json` with control counts and
+evidence presence. The folders under `OFFICIAL_BENCHMARKS/` state the control set
+for each.
+
+## C. Licence
+
+Anticommons 0.1.0 — Apache 2.0 for open use, Anticommons Enterprise License 1.0
+for commercial and regulated deployment. See `ANTICOMMONS_LICENSE.md`.

@@ -540,10 +540,10 @@
  "version": "1.0.0",
  "source": {
   "git": {
-   "head": "795d4dd660cf7e537ceb599fdb038c5388b33390",
-   "url": "https://github.com/peterljq/OpenMMD",
-   "branch": "master",
-   "sha_verified_from": "GitHub API commits/master"
+   "url": "https://github.com/openmm/openmm",
+   "head": "3a3ca07e763e44cfa74fe2e820d79113c1cb89b0",
+   "sha_verified_from": "revendor 2026-10-15: GitHub API commit lookup",
+   "previous_substitute": "https://github.com/peterljq/OpenMMD"
   }
  }
 }

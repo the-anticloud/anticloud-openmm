@@ -543,7 +543,7 @@
    "url": "https://github.com/openmm/openmm",
    "head": "3a3ca07e763e44cfa74fe2e820d79113c1cb89b0",
    "sha_verified_from": "revendor 2026-10-15: GitHub API commit lookup",
-   "previous_substitute": "https://github.com/peterljq/OpenMMD"
+   "previous_substitute": "https://github.com/openmm/openmm"
   }
  }
 }
